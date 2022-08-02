@@ -1,0 +1,140 @@
+.herosection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+.contentvideo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    user-select: none;
+  }
+
+  .wallpervideo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .main_info_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo_content{
+    padding-bottom: 35px;
+  }
+
+  .logo_img{
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  .info_content{
+    padding: 0 200px;
+    color: white;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+  }
+
+  .info_title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    padding-bottom: 35px;
+  }
+
+  .info_text{
+    font-size: 20px;
+    padding-bottom: 45px; 
+  }
+
+  .info_text::first-letter{
+    color: red;
+    font-size: 40px;
+    padding: 0 3px;
+  }
+
+  .explore_button {
+    display: block;
+    margin: 0 auto;
+    outline: 1px solid white;
+    position: relative;
+    padding: 15px;
+    font-size: 25px;
+    color: white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1);
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .explore_button:before,
+  .explore_button:after {
+    content: "";
+    position: absolute;
+    transition: inherit;
+    z-index: -1;
+  }
+  
+  .explore_button:hover {
+    outline: none;
+    color: black;
+    transition-delay: 0.5s;
+  }
+  
+  .explore_button:hover:before {
+    transition-delay: 0s;
+  }
+  
+  .explore_button:hover:after {
+    background: white;
+    transition-delay: 0.35s;
+  }
+
+  .from-top:before,
+.from-top:after {
+  left: 0;
+  height: 0;
+  width: 100%;
+}
+
+.from-top:before {
+  bottom: 0;
+  border: 1px solid white;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.from-top:after {
+  top: 0;
+  height: 0;
+}
+
+.from-top:hover:before,
+.from-top:hover:after {
+  height: 100%;
+}
+
+  
+  
