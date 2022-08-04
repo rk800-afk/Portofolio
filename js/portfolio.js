@@ -4,6 +4,7 @@ const historyArticle = document.querySelectorAll(".history_article")[0]
 const map = document.getElementById("map")
 const map_buttons = document.querySelectorAll(".map_button")
 const map_image = document.querySelectorAll(".map_section_image")[0]
+const map_overlay = document.querySelectorAll(".map_overlay")[0]
 
 window.addEventListener("scroll", () => {
     if (window.scrollY >= getCoords(historyVideo) - window.innerHeight) {
@@ -64,3 +65,23 @@ function clear_active()
     for(let i = 0; i < map_buttons.length; i++)
         map_buttons[i].classList.remove("map_button_active")
 }
+
+
+
+map_image.addEventListener("click", ()=>{
+    if(!map_image.classList.contains("map_section_image_active")){
+        map_image.classList.add("map_section_image_active")
+        map_overlay.style.display = "block"
+    }
+    else{
+        map_image.classList.remove("map_section_image_active") 
+        map_overlay.style.display = "none"
+    }
+})
+
+map_overlay.addEventListener("click", ()=>{
+    if(map_image.classList.contains("map_section_image_active")){
+        map_image.classList.remove("map_section_image_active")
+        map_overlay.style.display = "none"
+    }
+})
