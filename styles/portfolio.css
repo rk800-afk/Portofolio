@@ -170,11 +170,25 @@ header{
 } 
 
 .map_section{
+    position: relative;
     padding: 60px 0;
     background-color: coral;
 }
 
+.map_overlay{
+    display: none;
+    position: absolute;
+    background-color: black;
+    opacity: 50%;
+    z-index: 50;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
 .map_section_content{
+    position: relative;
     display: flex;
     justify-content: space-between;
     height: 500px;
@@ -186,9 +200,22 @@ header{
 }
 
 .map_section_image{
+    position: relative;
     width: 48%;
     background: url(/images/first.jfif) no-repeat center;
     background-size: cover;
+    transition: background .3s, transform 2s;
+}
+
+.map_section_image_active{
+    position: absolute;
+    z-index: 51;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%!important;
+    /* transform: scaleY(1.5); */
 }
 
 .map_section_buttons{
@@ -198,6 +225,7 @@ header{
 }
 
 .map_button{
+    z-index: 51;
     min-width: 150px;
     padding: 10px 30px;
     font-size: 20px;
@@ -220,4 +248,5 @@ header{
     background-color: black;
     color: white;
 }
+
 
