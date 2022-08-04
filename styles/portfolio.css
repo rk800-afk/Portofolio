@@ -26,10 +26,11 @@ body{
 
 header{
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 500;
     height: 100px;
-    width: 100%;
-    transition: width .3s;
 }
 
 .header__container{
@@ -120,3 +121,103 @@ header{
     padding: 60px 0;
     height: 500px;
 }
+
+.schedule_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.heigth_100{
+    height: 100%;
+}
+
+.first_schedule{
+    height: 50%;
+    width: 100%;
+    background: url(/images/back.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.schedule_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    color: white;
+    transition: all 1s;
+}
+
+.first_schedule:hover .schedule_content{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.519);
+} 
+
+.second_schedule{
+    height: 50%;
+    width: 100%;
+    background: url(/images/back2.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.second_schedule:hover .schedule_content{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.519);
+} 
+
+.map_section{
+    padding: 60px 0;
+    background-color: coral;
+}
+
+.map_section_content{
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+}
+
+#map{
+    width: 50%;
+    height: 100%;
+}
+
+.map_section_image{
+    width: 48%;
+    background: url(/images/first.jfif) no-repeat center;
+    background-size: cover;
+}
+
+.map_section_buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 200px 0px 200px;
+}
+
+.map_button{
+    min-width: 150px;
+    padding: 10px 30px;
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    color: black;
+    outline: 2px solid black;
+    cursor: pointer;
+    transition: all .3s;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.map_button_active{
+    background-color: black!important;
+    color: white!important;
+}
+
+.map_button:hover{
+    background-color: black;
+    color: white;
+}
+
