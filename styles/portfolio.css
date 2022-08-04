@@ -81,7 +81,8 @@ header{
 }
 
 .history_section{
-    background-color: orange;
+    background: url(/images/Хмар.png) no-repeat center;
+    background-size: cover;
 }
 
 .history_content{

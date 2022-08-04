@@ -40,12 +40,12 @@
   }
 
   .logo_content{
-    padding-bottom: 35px;
+    padding-bottom: 30px;
   }
 
   .logo_img{
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 300px;
+    max-height: 300px;
   }
 
   .info_content{
@@ -60,18 +60,19 @@
     text-align: center;
     font-weight: 700;
     font-size: 40px;
-    padding-bottom: 35px;
+    padding-bottom: 75px;
   }
 
   .info_text{
     font-size: 20px;
-    padding-bottom: 45px; 
+    padding-bottom: 90px; 
   }
+
 
   .info_text::first-letter{
     color: red;
     font-size: 40px;
-    padding: 0 3px;
+    padding: 0 1px;
   }
 
   .explore_button {
