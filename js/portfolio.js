@@ -5,6 +5,7 @@ const map = document.getElementById("map")
 const map_buttons = document.querySelectorAll(".map_button")
 const map_image = document.querySelectorAll(".map_section_image")[0]
 const map_overlay = document.querySelectorAll(".map_overlay")[0]
+const underline = document.querySelectorAll(".underline")[0]
 
 window.addEventListener("scroll", () => {
     if (window.scrollY >= getCoords(historyVideo) - window.innerHeight) {
@@ -33,6 +34,7 @@ function clickFirstLoc(){
         map_image.style.background = "url(/images/first.jfif) no-repeat center"
         clear_active()
         map_buttons[0].classList.add("map_button_active")
+        underline.style.transform = "translateX(0)"
     }
 }
 function clickSecondLoc(){
@@ -41,6 +43,7 @@ function clickSecondLoc(){
         map_image.style.background = "url(/images/second.jpg) no-repeat center"
         clear_active()
         map_buttons[1].classList.add("map_button_active")
+        underline.style.transform = "translateX(150px)"
     }
 }
 function clickThirdLoc(){
@@ -49,6 +52,7 @@ function clickThirdLoc(){
         map_image.style.background = "url(/images/third.jpg) no-repeat center"
         clear_active()
         map_buttons[2].classList.add("map_button_active")
+        underline.style.transform = "translateX(300px)"
     }
 }
 function clickFourthLoc(){
@@ -57,6 +61,7 @@ function clickFourthLoc(){
         map_image.style.background = "url(/images/fourth.png) no-repeat center"
         clear_active()
         map_buttons[3].classList.add("map_button_active")
+        underline.style.transform = "translateX(450px)"
     }
 }
 
@@ -85,3 +90,5 @@ map_overlay.addEventListener("click", ()=>{
         map_overlay.style.display = "none"
     }
 })
+
+
