@@ -6,6 +6,7 @@ const map_buttons = document.querySelectorAll(".map_button")
 const map_image = document.querySelectorAll(".map_section_image")[0]
 const map_overlay = document.querySelectorAll(".map_overlay")[0]
 const underline = document.querySelectorAll(".underline")[0]
+const cardImages = document.querySelectorAll(".card_images_slider")
 
 window.addEventListener("scroll", () => {
     if (window.scrollY >= getCoords(historyVideo) - window.innerHeight) {
@@ -90,5 +91,52 @@ map_overlay.addEventListener("click", ()=>{
         map_overlay.style.display = "none"
     }
 })
+
+let middlePos = ""
+
+function leftArrowClick(){
+    let left = null
+    let middle = null
+    let right = null
+    for(let i = 0; i < cardImages.length; i++)
+    {
+        if(cardImages[i].classList.contains("card_images_slider_left"))
+        {
+            left = cardImages[i]
+            console.log(left);
+        }
+        else if(cardImages[i].classList.contains("card_images_slider_middle"))
+        {
+            middle = cardImages[i]
+            console.log(middle);
+        }
+        else if(cardImages[i].classList.contains("card_images_slider_right"))
+        {
+            right = cardImages[i]
+            console.log(right);
+
+        }
+    }
+
+
+    
+    left.style.transform = "translateX(-320px)"
+    // left.classList.remove("card_images_slider_left")
+    // left.classList.add("card_images_slider_right")
+    // middle.classList.add("left")
+    // middle.classList.remove("card_images_slider_middle")
+    // middle.classList.add("card_images_slider_left")
+    // right.classList.add("left")
+    // right.classList.remove("card_images_slider_right")
+    // right.classList.add("card_images_slider_middle")
+
+    // left.classList.add("left")
+    // middle.classList.add("left")
+    // middle.classList.remove("card_images_slider_middle")
+    // middle.classList.add("card_images_slider_left")
+    // right.classList.add("left")
+    // right.classList.remove("card_images_slider_right")
+    // right.classList.add("card_images_slider_middle")
+}
 
 

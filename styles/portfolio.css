@@ -416,6 +416,74 @@ header{
     transition: all .3s;
 }
 
+.images_slider_section{
+    padding: 60px 0;
+    background: url(/images/Фон4.png) no-repeat center;
+    background-size: cover;
+}
+
+.images_slider_section_content{
+    padding: 0 100px;
+    position: relative;
+    height: 500px;
+}
+
+.images_slider_section_cards{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* .left{
+    transform: translateX(-320px);
+} */
+
+.right{
+    transform: translateX(100px);
+}
+
+
+.card_images_slider_left{
+    /* transform: rotate3d(0, 1, 0.05, -45deg); */
+    transition: all 1s;
+}
+
+.card_images_slider_middle{
+    transition: all 1s;
+    /* transform: scale(1.2); */
+}
+
+.card_images_slider_right{
+    /* transform: rotate3d(0, 1, 0.05, 45deg); */
+    transition: all 1s;
+}
+
+.card_images_slider_img{
+    width: 300px;
+    height: 300px;
+}
+
+.left_arrow{
+    position: absolute;
+    left: 50px;
+    top:50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-top: 10px solid red;
+    border-left: 10px solid red;
+    transform: rotate(-45deg);
+    transition: all 1s;
+}
+
+.left_arrow:hover{
+    border-top: 10px solid green;
+    border-left: 10px solid green;
+}
+
 .footer{
     font-size: 18px;
     display: flex;
