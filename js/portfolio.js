@@ -98,9 +98,16 @@ function leftArrowClick(){
     let left = null
     let middle = null
     let right = null
+    let rightHidden = null
+    let leftHidden = null
     for(let i = 0; i < cardImages.length; i++)
     {
-        if(cardImages[i].classList.contains("card_images_slider_left"))
+        if(cardImages[i].classList.contains("card_images_slider_left_hidden"))
+        {
+            leftHidden = cardImages[i]
+            console.log(leftHidden);
+        }
+        else if(cardImages[i].classList.contains("card_images_slider_left"))
         {
             left = cardImages[i]
             console.log(left);
@@ -114,29 +121,80 @@ function leftArrowClick(){
         {
             right = cardImages[i]
             console.log(right);
-
+        }
+        else if(cardImages[i].classList.contains("card_images_slider_right_hidden"))
+        {
+            rightHidden = cardImages[i]
+            console.log(rightHidden);
         }
     }
 
+    leftHidden.classList.remove("card_images_slider_left_hidden")
+    leftHidden.classList.add("card_images_slider_right_hidden")
 
-    
-    left.style.transform = "translateX(-320px)"
-    // left.classList.remove("card_images_slider_left")
-    // left.classList.add("card_images_slider_right")
-    // middle.classList.add("left")
-    // middle.classList.remove("card_images_slider_middle")
-    // middle.classList.add("card_images_slider_left")
-    // right.classList.add("left")
-    // right.classList.remove("card_images_slider_right")
-    // right.classList.add("card_images_slider_middle")
+    left.classList.remove("card_images_slider_left")
+    left.classList.add("card_images_slider_left_hidden")
 
-    // left.classList.add("left")
-    // middle.classList.add("left")
-    // middle.classList.remove("card_images_slider_middle")
-    // middle.classList.add("card_images_slider_left")
-    // right.classList.add("left")
-    // right.classList.remove("card_images_slider_right")
-    // right.classList.add("card_images_slider_middle")
+    middle.classList.remove("card_images_slider_middle")
+    middle.classList.add("card_images_slider_left")
+
+    right.classList.remove("card_images_slider_right")
+    right.classList.add("card_images_slider_middle")
+
+    rightHidden.classList.remove("card_images_slider_right_hidden")
+    rightHidden.classList.add("card_images_slider_right")    
+}
+
+function rightArrowClick(){
+    let left = null
+    let middle = null
+    let right = null
+    let rightHidden = null
+    let leftHidden = null
+    for(let i = 0; i < cardImages.length; i++)
+    {
+        if(cardImages[i].classList.contains("card_images_slider_left_hidden"))
+        {
+            leftHidden = cardImages[i]
+            console.log(leftHidden);
+        }
+        else if(cardImages[i].classList.contains("card_images_slider_left"))
+        {
+            left = cardImages[i]
+            console.log(left);
+        }
+        else if(cardImages[i].classList.contains("card_images_slider_middle"))
+        {
+            middle = cardImages[i]
+            console.log(middle);
+        }
+        else if(cardImages[i].classList.contains("card_images_slider_right"))
+        {
+            right = cardImages[i]
+            console.log(right);
+        }
+        else if(cardImages[i].classList.contains("card_images_slider_right_hidden"))
+        {
+            rightHidden = cardImages[i]
+            console.log(rightHidden);
+        }
+    }
+
+    rightHidden.classList.remove("card_images_slider_right_hidden")
+    rightHidden.classList.add("card_images_slider_left_hidden")
+
+    right.classList.remove("card_images_slider_right")
+    right.classList.add("card_images_slider_right_hidden")  
+
+    middle.classList.remove("card_images_slider_middle")
+    middle.classList.add("card_images_slider_right") 
+
+    left.classList.remove("card_images_slider_left")
+    left.classList.add("card_images_slider_middle")
+
+    leftHidden.classList.remove("card_images_slider_left_hidden")
+    leftHidden.classList.add("card_images_slider_left")
+
 }
 
 

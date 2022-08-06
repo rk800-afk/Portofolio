@@ -435,16 +435,16 @@ header{
 }
 
 .images_slider_section_content{
-    padding: 0 100px;
     position: relative;
-    height: 500px;
+    height: 600px;
 }
 
 .images_slider_section_cards{
+    position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
 }
 
@@ -456,44 +456,103 @@ header{
     transform: translateX(100px);
 }
 
+.card_images_slider{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10%;
+}
 
 .card_images_slider_left{
-    /* transform: rotate3d(0, 1, 0.05, -45deg); */
-    transition: all 1s;
+    left: 16%;
+    transition: all .3s linear;
+    opacity: 1;
+    z-index: 1;
+    transform: translate(-50%, -50%) rotate3d(0, 1, 0.05, -45deg);
 }
 
 .card_images_slider_middle{
-    transition: all 1s;
-    /* transform: scale(1.2); */
+    transition: all .3s linear;
+    opacity: 1;
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.card_images_slider_middle:hover{
+    transform: translate(-50%, -50%) scale(2, 1.4);
+    z-index: 100;
+}
+
+.card_images_slider_middle:hover .card_images_slider_img{
+    border: 2px solid white;
 }
 
 .card_images_slider_right{
-    /* transform: rotate3d(0, 1, 0.05, 45deg); */
-    transition: all 1s;
+    left: 84%;
+    transform: translate(-50%, -50%) rotate3d(0, 1, 0.05, 45deg);
+    transition: all .3s linear;
+    opacity: 1;
+    z-index: 1;
+}
+
+.card_images_slider_left_hidden{
+    transform: translate(-50%, -50%) rotate3d(0, 1, 0.05, -45deg) scale(0.7);
+    left: -18%;
+    transition: all .3s linear;
+    opacity: 0;
+    z-index: -1;
+}
+
+.card_images_slider_right_hidden{
+    transform: translate(-50%, -50%) rotate3d(0, 1, 0.05, 45deg) scale(0.7);
+    left: 118%;
+    transition: all .3s linear;
+    opacity: 0;
+    z-index: -1;
 }
 
 .card_images_slider_img{
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+
+    /* transition: all 1s; */
 }
 
 .left_arrow{
     position: absolute;
-    left: 50px;
+    left: -40px;
     top:50%;
-    transform: translateY(-50%);
     width: 40px;
     height: 40px;
     cursor: pointer;
     border-top: 10px solid red;
     border-left: 10px solid red;
-    transform: rotate(-45deg);
+    transform: translateY(-50%) rotate(-45deg);
     transition: all 1s;
 }
 
 .left_arrow:hover{
     border-top: 10px solid green;
     border-left: 10px solid green;
+}
+
+.right_arrow{
+    position: absolute;
+    right: -40px;
+    top:50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-top: 10px solid red;
+    border-right: 10px solid red;
+    transform: translateY(-50%) rotate(45deg);
+    transition: all 1s;
+}
+
+.right_arrow:hover{
+    border-top: 10px solid green;
+    border-right: 10px solid green;
 }
 
 .footer{
