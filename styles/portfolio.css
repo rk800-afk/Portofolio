@@ -197,6 +197,10 @@ header{
     left: 0;
 }
 
+
+/*History
+-------------*/
+
 .history_section{
     padding: 60px 0;
     background: url(/images/Фон1.png) no-repeat center;
@@ -206,7 +210,7 @@ header{
 .simple{
     background-color: rgb(163, 165, 20);
     width: 100%;
-    height: 10px;
+    height: 15px;
 }
 
 .history_content{
@@ -242,6 +246,9 @@ header{
 
 
 
+/*Slider
+-------------*/
+
 .slider_section{
     background: url(/images/Фон2.png) no-repeat center;
     background-size: cover;
@@ -260,10 +267,15 @@ header{
     height: 500px;
 }
 
+
+
+/*Shedule
+------------*/
 .schedule_section{
     background: url(/images/Фон3.png) no-repeat center;
     background-size: cover;
-    padding: 60px 0;
+    /* padding: 60px 0; */
+    height: 600px;
 }
 
 .schedule_container{
@@ -446,4 +458,147 @@ header{
 
 .footer_logo_img{
     width: 160px;
+}
+
+
+/* Work Days
+-----------------*/
+.work {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.works__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    background-color: rgba(125, 243, 131, 0.90);
+    transition: opacity .2s linear;
+
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.work_icon {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    transform: translate3d(-50%,
+    -50%,0);
+}
+
+.works__title {
+    font-size: 25px;
+    margin-bottom: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: rgb(48, 47, 47);
+    text-transform: uppercase;
+}
+
+.works_text {
+    font-size: 21px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 700;
+    color: rgb(48, 47, 47);
+    opacity: .80;
+}
+
+.work_item:hover .works__content {
+    opacity: 1;
+}
+
+/* Item_One 
+-----------------------*/
+.work_item_One {
+    width: 100%;
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+}
+
+.works__titleTop {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+.works_textTop {
+    font-size: 21px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 255, 255);
+    opacity: .90;
+}
+
+.work_item_One .works__content {
+    opacity: 1;
+    background-color: rgba(97, 96, 96, 0.8);
+    text-shadow: 2px 1px rgb(0, 0, 0);
+    border-radius: 50px;
+}
+/* Item_Two_Five
+-----------------------*/
+
+.work_item {
+    width: 100%;
+    position: relative;
+    height: 275px;
+    overflow: hidden;
+}
+
+
+/* Item_Last 
+------------------------*/
+.work_Last {
+    width: 50%;
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.work_Last:hover .works__content {
+    opacity: 1;
+}
+
+
+/* Item_End 
+---------------*/
+
+.work_item_End {
+    width: 100%;
+    position: relative;
+    height: 25px;
+    overflow: hidden;
+}
+
+.work_item_End .works__content {
+    opacity: 1;
+    background-color: rgba(97, 96, 96, 0.8);
+    border-radius: 20px;
+}
+
+
+.Work_day{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #bce4ff;
+    font-weight: 900;
+    white-space: nowrap;
+    font-size: 170px;
 }
