@@ -627,7 +627,7 @@ header{
 }
 
 .works__title {
-    font-size: 25px;
+    font-size: 37px;
     margin-bottom: 5px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 700;
@@ -636,7 +636,7 @@ header{
 }
 
 .works_text {
-    font-size: 21px;
+    font-size: 26px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 700;
     color: rgb(48, 47, 47);
