@@ -32,7 +32,7 @@ function getCoords(elem) {
 function clickFirstLoc(){
     if(!map_buttons[0].classList.contains("map_button_active")){
         map.src = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d229.76867659623045!2d23.868543535856553!3d49.78500898654319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sua!4v1659619837724!5m2!1sru!2sua"
-        map_image.style.background = "url(/images/first.jfif) no-repeat center"
+        map_image.style.background = "url(/images/Корпус.jpg) no-repeat center"
         clear_active()
         map_buttons[0].classList.add("map_button_active")
         underline.style.transform = "translateX(0)"
@@ -41,7 +41,7 @@ function clickFirstLoc(){
 function clickSecondLoc(){
     if(!map_buttons[1].classList.contains("map_button_active")){
         map.src = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d324.9404335767552!2d23.869704303888593!3d49.785239335505274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sua!4v1659619882290!5m2!1sru!2sua"
-        map_image.style.background = "url(/images/second.jpg) no-repeat center"
+        map_image.style.background = "url(/images/Площа.jpg) no-repeat center"
         clear_active()
         map_buttons[1].classList.add("map_button_active")
         underline.style.transform = "translateX(150px)"
@@ -49,8 +49,8 @@ function clickSecondLoc(){
 }
 function clickThirdLoc(){
     if(!map_buttons[2].classList.contains("map_button_active")){
-        map.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d772.866578561013!2d23.868251547666052!3d49.78375828428979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae168cd4a5437%3A0x71a3286e79cec09!2sKaplytsya%20Sv.%20Apostoliv%20Petra%20I%20Pavla!5e1!3m2!1sru!2sua!4v1659619995956!5m2!1sru!2sua"
-        map_image.style.background = "url(/images/third.jpg) no-repeat center"
+        map.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d306.0857908937876!2d23.86818681564651!3d49.78320286850345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae15ad3a337a3%3A0xd45e78b9ca486cd3!2sPalats%20Arkhiyepyskopiv!5e1!3m2!1sru!2sua!4v1659879485895!5m2!1sru!2sua"
+        map_image.style.background = "url(/images/Палац.jpg) no-repeat center"
         clear_active()
         map_buttons[2].classList.add("map_button_active")
         underline.style.transform = "translateX(300px)"
@@ -59,7 +59,7 @@ function clickThirdLoc(){
 function clickFourthLoc(){
     if(!map_buttons[3].classList.contains("map_button_active")){
         map.src = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d386.4297042464282!2d23.869079671668015!3d49.78420773289384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sua!4v1659620059219!5m2!1sru!2sua"
-        map_image.style.background = "url(/images/fourth.png) no-repeat center"
+        map_image.style.background = "url(/images/Парк.jpg) no-repeat center"
         clear_active()
         map_buttons[3].classList.add("map_button_active")
         underline.style.transform = "translateX(450px)"
