@@ -232,7 +232,7 @@ header{
 .history_article{
     display: flex;
     font-size: 20px;
-    background-color: #00000068;
+    background-color: #000000a6;
     padding: 40px;
     color: white;
     width: 500px; 
@@ -240,7 +240,7 @@ header{
     transform: translateX(200%);
     opacity: 0;
     border-bottom-right-radius: 30%;
-    transition: opacity .75s, transform 1.5s ease;
+    transition: opacity .75s, transform 1.8s ease;
     overflow: hidden;
 }
 
@@ -368,9 +368,9 @@ header{
 .map_section_image{
     position: relative;
     width: 48%;
-    background: url(/images/first.jfif) no-repeat center;
-    background-size: cover;
-    transition: background .3s, transform .3s, box-shadow .3s;
+    background: url(/images/Корпус.jpg) no-repeat center;
+    background-size: cover!important;
+    transition: all .5s, transform .3s, box-shadow .3s;
 }
 
 .map_section_image:hover{
@@ -403,9 +403,11 @@ header{
     font-size: 20px;
     border: none;
     background-color: transparent;
-    color: black;
+    color: #fff700;
     cursor: pointer;
     transition: all .3s;
+    font-weight: 600;
+    font-size: 22px;
 }
 
 .map_button_active{
@@ -523,36 +525,36 @@ header{
     position: absolute;
     left: -40px;
     top:50%;
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     cursor: pointer;
-    border-top: 10px solid red;
-    border-left: 10px solid red;
+    border-top: 10px solid rgb(0, 0, 0);
+    border-left: 10px solid rgb(0, 0, 0);
     transform: translateY(-50%) rotate(-45deg);
     transition: all 1s;
 }
 
 .left_arrow:hover{
-    border-top: 10px solid green;
-    border-left: 10px solid green;
+    border-top: 10px solid rgb(49, 245, 252);
+    border-left: 10px solid rgb(49, 245, 252);
 }
 
 .right_arrow{
     position: absolute;
     right: -40px;
     top:50%;
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     cursor: pointer;
-    border-top: 10px solid red;
-    border-right: 10px solid red;
+    border-top: 10px solid rgb(0, 0, 0);
+    border-right: 10px solid rgb(0, 0, 0);
     transform: translateY(-50%) rotate(45deg);
     transition: all 1s;
 }
 
 .right_arrow:hover{
-    border-top: 10px solid green;
-    border-right: 10px solid green;
+    border-top: 10px solid rgb(49, 245, 252);
+    border-right: 10px solid rgb(49, 245, 252);
 }
 
 .footer{
@@ -625,7 +627,7 @@ header{
 }
 
 .works__title {
-    font-size: 25px;
+    font-size: 37px;
     margin-bottom: 5px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 700;
@@ -634,7 +636,7 @@ header{
 }
 
 .works_text {
-    font-size: 21px;
+    font-size: 26px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 700;
     color: rgb(48, 47, 47);
