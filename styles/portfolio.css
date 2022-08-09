@@ -226,24 +226,32 @@ header{
     transform: translateX(-200%);
     opacity: 0;
     border-top-left-radius: 50%;
-    transition: opacity .75s, transform 1.5s ease;
+    transition: opacity .75s, transform 1.5s ease, width 1s;
 }
 
 .history_article{
     display: flex;
     font-size: 20px;
     background-color: #000000a6;
-    padding: 40px;
+    padding: 40px 40px 80px 40px;
     color: white;
     width: 500px; 
     height: 500px;
     transform: translateX(200%);
     opacity: 0;
     border-bottom-right-radius: 30%;
-    transition: opacity .75s, transform 1.8s ease;
+    transition: opacity .75s, transform 1.8s ease, width 1s, outline .3s;
     overflow: hidden;
+    cursor: pointer;
 }
 
+.history_article:hover{
+    outline: 2px solid white;
+}
+
+.history_article_content{
+    overflow: hidden;
+}
 
 
 /*Slider
@@ -462,6 +470,8 @@ header{
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
     border-radius: 10%;
 }
 
@@ -605,7 +615,7 @@ header{
     height: 100%;
     opacity: 0;
 
-    background-color: rgba(125, 243, 131, 0.90);
+    background-color: rgba(125, 243, 131, 0.80);
     transition: opacity .2s linear;
 
     text-align: center;
@@ -643,6 +653,16 @@ header{
     opacity: .80;
 }
 
+.schedule_bottom_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.schedule_bottom_content .work_Last{
+    width: 50%;
+}
+
 .work_item:hover .works__content {
     opacity: 1;
 }
@@ -653,7 +673,11 @@ header{
     width: 100%;
     position: relative;
     height: 100px;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(53, 156, 53, 0.492);
 }
 
 .works__titleTop {
@@ -686,16 +710,21 @@ header{
     position: relative;
     height: 275px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 /* Item_Last 
 ------------------------*/
 .work_Last {
-    width: 50%;
     position: relative;
     height: 200px;
-    overflow: hidden;
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .work_Last:hover .works__content {
@@ -711,23 +740,16 @@ header{
     position: relative;
     height: 25px;
     overflow: hidden;
+    background-color: rgba(53, 156, 53, 0.492);
 }
-
-.work_item_End .works__content {
-    opacity: 1;
-    background-color: rgba(97, 96, 96, 0.8);
-    border-radius: 20px;
-}
-
 
 .Work_day{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
     color: #bce4ff;
     font-weight: 900;
     white-space: nowrap;
     font-size: 170px;
+}
+
+.Work_day_sub{
+    font-size: 140px;
 }
