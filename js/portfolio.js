@@ -6,7 +6,8 @@ const map_buttons = document.querySelectorAll(".map_button")
 const map_image = document.querySelectorAll(".map_section_image")[0]
 const map_overlay = document.querySelectorAll(".map_overlay")[0]
 const underline = document.querySelectorAll(".underline")[0]
-const cardImages = document.querySelectorAll(".card_images_slider")
+let cardImages = document.querySelectorAll(".card_images_slider")
+const imagesSliderCards = document.querySelectorAll(".images_slider_section_cards")[0]
 
 window.addEventListener("scroll", () => {
     if (window.scrollY >= getCoords(historyVideo) - window.innerHeight) {
@@ -92,109 +93,127 @@ map_overlay.addEventListener("click", ()=>{
     }
 })
 
-let middlePos = ""
-
-function leftArrowClick(){
-    let left = null
-    let middle = null
-    let right = null
-    let rightHidden = null
-    let leftHidden = null
-    for(let i = 0; i < cardImages.length; i++)
-    {
-        if(cardImages[i].classList.contains("card_images_slider_left_hidden"))
-        {
-            leftHidden = cardImages[i]
-            console.log(leftHidden);
-        }
-        else if(cardImages[i].classList.contains("card_images_slider_left"))
-        {
-            left = cardImages[i]
-            console.log(left);
-        }
-        else if(cardImages[i].classList.contains("card_images_slider_middle"))
-        {
-            middle = cardImages[i]
-            console.log(middle);
-        }
-        else if(cardImages[i].classList.contains("card_images_slider_right"))
-        {
-            right = cardImages[i]
-            console.log(right);
-        }
-        else if(cardImages[i].classList.contains("card_images_slider_right_hidden"))
-        {
-            rightHidden = cardImages[i]
-            console.log(rightHidden);
-        }
-    }
-
-    leftHidden.classList.remove("card_images_slider_left_hidden")
-    leftHidden.classList.add("card_images_slider_right_hidden")
-
-    left.classList.remove("card_images_slider_left")
-    left.classList.add("card_images_slider_left_hidden")
-
-    middle.classList.remove("card_images_slider_middle")
-    middle.classList.add("card_images_slider_left")
-
-    right.classList.remove("card_images_slider_right")
-    right.classList.add("card_images_slider_middle")
-
-    rightHidden.classList.remove("card_images_slider_right_hidden")
-    rightHidden.classList.add("card_images_slider_right")    
+if(cardImages.length >= 5){
+    cardImages[0].classList.add("card_images_slider_left")
+    cardImages[1].classList.add("card_images_slider_middle")
+    cardImages[2].classList.add("card_images_slider_right")
+    cardImages[3].classList.add("card_images_slider_right_hidden")
+    cardImages[cardImages.length - 1].classList.add("card_images_slider_left_hidden")
 }
+
+let leftHidPos = cardImages.length - 1
+let leftPos = 0
+let middlePos = 1
+let rightPos = 2
+let rightHidPos = 3
 
 function rightArrowClick(){
-    let left = null
-    let middle = null
-    let right = null
-    let rightHidden = null
-    let leftHidden = null
-    for(let i = 0; i < cardImages.length; i++)
-    {
-        if(cardImages[i].classList.contains("card_images_slider_left_hidden"))
-        {
-            leftHidden = cardImages[i]
-            console.log(leftHidden);
-        }
-        else if(cardImages[i].classList.contains("card_images_slider_left"))
-        {
-            left = cardImages[i]
-            console.log(left);
-        }
-        else if(cardImages[i].classList.contains("card_images_slider_middle"))
-        {
-            middle = cardImages[i]
-            console.log(middle);
-        }
-        else if(cardImages[i].classList.contains("card_images_slider_right"))
-        {
-            right = cardImages[i]
-            console.log(right);
-        }
-        else if(cardImages[i].classList.contains("card_images_slider_right_hidden"))
-        {
-            rightHidden = cardImages[i]
-            console.log(rightHidden);
-        }
+
+    cardImages[leftHidPos].classList.remove("card_images_slider_left_hidden")
+    if(leftHidPos > 0){
+        cardImages[leftHidPos-1].classList.add("card_images_slider_left_hidden")
+        leftHidPos--
     }
-
-    rightHidden.classList.remove("card_images_slider_right_hidden")
-    rightHidden.classList.add("card_images_slider_left_hidden")
-
-    right.classList.remove("card_images_slider_right")
-    right.classList.add("card_images_slider_right_hidden")  
-
-    middle.classList.remove("card_images_slider_middle")
-    middle.classList.add("card_images_slider_right") 
-
-    left.classList.remove("card_images_slider_left")
-    left.classList.add("card_images_slider_middle")
-
-    leftHidden.classList.remove("card_images_slider_left_hidden")
-    leftHidden.classList.add("card_images_slider_left")
-
+    else{
+        cardImages[cardImages.length - 1].classList.add("card_images_slider_left_hidden")
+        leftHidPos = cardImages.length - 1
+    }
+    cardImages[leftPos].classList.remove("card_images_slider_left")
+    if(leftPos > 0){
+        cardImages[leftPos-1].classList.add("card_images_slider_left")
+        leftPos--
+    }
+    else{
+        cardImages[cardImages.length - 1].classList.add("card_images_slider_left")
+        leftPos = cardImages.length - 1
+    }
+    cardImages[middlePos].classList.remove("card_images_slider_middle")
+    if(middlePos > 0){
+        cardImages[middlePos-1].classList.add("card_images_slider_middle")
+        middlePos--
+    }
+    else{
+        cardImages[cardImages.length - 1].classList.add("card_images_slider_middle")
+        middlePos = cardImages.length - 1
+    }
+    cardImages[rightPos].classList.remove("card_images_slider_right")
+    if(rightPos > 0){
+        cardImages[rightPos-1].classList.add("card_images_slider_right")
+        rightPos--
+    }
+    else{
+        cardImages[cardImages.length - 1].classList.add("card_images_slider_right")
+        rightPos = cardImages.length - 1
+    }
+    cardImages[rightHidPos].classList.remove("card_images_slider_right_hidden")
+    if(rightHidPos > 0){
+        cardImages[rightHidPos-1].classList.add("card_images_slider_right_hidden")
+        rightHidPos--
+    }
+    else{
+        cardImages[cardImages.length - 1].classList.add("card_images_slider_right_hidden")
+        rightHidPos = cardImages.length - 1
+    }
 }
 
+function leftArrowClick(){
+
+    cardImages[leftHidPos].classList.remove("card_images_slider_left_hidden")
+    if(leftHidPos < cardImages.length - 1){
+        cardImages[leftHidPos+1].classList.add("card_images_slider_left_hidden")
+        leftHidPos++
+    }
+    else{
+        cardImages[0].classList.add("card_images_slider_left_hidden")
+        leftHidPos = 0
+    }
+    
+    cardImages[leftPos].classList.remove("card_images_slider_left")
+    if(leftPos < cardImages.length - 1){
+        cardImages[leftPos+1].classList.add("card_images_slider_left")
+        leftPos++
+    }
+    else{
+        cardImages[0].classList.add("card_images_slider_left")
+        leftPos = 0
+    }
+    cardImages[middlePos].classList.remove("card_images_slider_middle")
+    if(middlePos < cardImages.length - 1){
+        cardImages[middlePos+1].classList.add("card_images_slider_middle")
+        middlePos++
+    }
+    else{
+        cardImages[0].classList.add("card_images_slider_middle")
+        middlePos = 0
+    }
+    cardImages[rightPos].classList.remove("card_images_slider_right")
+    if(rightPos < cardImages.length - 1){
+        cardImages[rightPos+1].classList.add("card_images_slider_right")
+        rightPos++
+    }
+    else{
+        cardImages[0].classList.add("card_images_slider_right")
+        rightPos = 0
+    }
+    cardImages[rightHidPos].classList.remove("card_images_slider_right_hidden")
+    if(rightHidPos < cardImages.length - 1){
+        cardImages[rightHidPos+1].classList.add("card_images_slider_right_hidden")
+        rightHidPos++
+    }
+    else{
+        cardImages[0].classList.add("card_images_slider_right_hidden")
+        rightHidPos = 0
+    }
+}
+
+function changeSizeHistory(){
+    if(historyArticle.style.width == "1500px"){
+        historyArticle.style.width = "500px"
+    }
+    else
+    {
+        historyArticle.style.width = "1500px"
+    }
+
+}
 

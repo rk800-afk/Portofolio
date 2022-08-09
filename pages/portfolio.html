@@ -58,17 +58,23 @@
                                 <div class="overlay overlay_history"></div>
                             </div>
                         </div>
-                        <div class="history_article">
-                            <p> Інститут сільського господарства Карпатського регіону НААН має більш ніж півстолітню
-                                історію.
-                                Вона сягає далекого 1945 р., коли, згідно з Постановою Раднаркому СРСР від 21.03.1945 р.
-                                № 36-10 і Постановою
-                                Раднаркому УРСР від 12.05.1945 р. № 775, було створено Львівську науково-дослідну
-                                станцію рільництва з основними
-                                напрямами роботи: селекція і насінництво зернових культур, агротехніка і хімізація,
-                                кормовиробництво, овочівництво,
-                                захист рослин, тваринництво, економіка і організація сільськогосподарського виробництва.
+                        <div class="history_article" onclick="changeSizeHistory()">
+                            <div class="history_article_content">
+                                <p> Інститут сільського господарства Карпатського регіону НААН має більш ніж півстолітню
+                                    історію.
+                                    Вона сягає далекого 1945 р., коли, згідно з Постановою Раднаркому СРСР від 21.03.1945 р.
+                                    № 36-10 і Постановою
+                                    Раднаркому УРСР від 12.05.1945 р. № 775, було створено Львівську науково-дослідну
+                                    станцію рільництва з основними
+                                    напрямами роботи: селекція і насінництво зернових культур, агротехніка і хімізація,
+                                    кормовиробництво, овочівництво,
+                                    захист рослин, тваринництво, економіка і організація сільськогосподарського виробництва.
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae aut beatae vitae cum fugiat, recusandae nisi
+                                    animi deleniti ipsam ad vero accusantium id dolore neque, earum, ratione cumque totam architecto!
+                                    Quasi quas aliquam cum ullam. Minima fugiat quam veritatis fugit recusandae cupiditate cum aut, dolor mollitia
+                                    temporibus labore, vel a officia dolores dolore possimus consequuntur iure placeat suscipit doloribus excepturi?
                                 </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -134,10 +140,8 @@
                 
                 <div class="work">
                     <div class="work_item_One">
-                        <div class="works__content">
-                            <div class="works__titleTop">Графік роботи</div>
-                            <div class="works_textTop">Тут ви можете ознайомитись із робочим часом</div>
-                        </div>
+                        <h2 class="works__titleTop">Графік роботи</h2>
+                        <p class="works_textTop">Тут ви можете ознайомитись із робочим часом</p>
                     </div>
                     <div class="work_item">
                         <p class="Work_day">MONDAY-FRIDAY</p>
@@ -145,27 +149,27 @@
                             <div class="works__title"> 
                                 <p>Понеділок - Пятниця</p>
                             </div>
-                            <div class="works_text">8:30-17:00</div>
+                            <p class="works_text">8:30-17:00</p>
                         </div>
                     </div>
-                    <div class="work_Last">
-                        <p class="Work_day">SATURDAY</p>
-                        <div class="works__content">
-                            <div class="works__title"> Субота</div>
-                            <div class="works_text">-----------Закрито----------</div>
+                    <div class="schedule_bottom_content">
+                        <div class="work_Last">
+                            <p class="Work_day Work_day_sub">SATURDAY</p>
+                            <div class="works__content">
+                                <p class="works__title"> Субота</p>
+                                <p class="works_text">-----------Закрито----------</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="work_Last">
-                        <p class="Work_day">SUNDAY</p>
-                        <div class="works__content">
-                            <div class="works__title"> Неділя</div>
-                            <div class="works_text">-----------Закрито----------</div>
+                        <div class="work_Last">
+                            <p class="Work_day Work_day_sub">SUNDAY</p>
+                            <div class="works__content">
+                                <p class="works__title"> Неділя</p>
+                                <p class="works_text">-----------Закрито----------</p>
+                            </div>
                         </div>
                     </div>
                     <div class="work_item_End">
-                       <div class="works__content">
                         <a name="map_section_place"></a>
-                       </div>
                    </div>
                 </div>
 
@@ -200,20 +204,32 @@
                     <div class="images_slider_section_content">
                         <div class="left_arrow" onclick="leftArrowClick()"></div>
                         <div class="images_slider_section_cards">
-                            <div class="card_images_slider card_images_slider_left_hidden">
+                            <div class="card_images_slider">
                                 <img class="card_images_slider_img" src="/images/firstElement.jpg" alt="">
                             </div>
-                            <div class="card_images_slider card_images_slider_left">
-                                <img class="card_images_slider_img" src="/images/firstElement.jpg" alt="">
+                            <div class="card_images_slider">
+                                <img class="card_images_slider_img" src="/images/Корпус.jpg" alt="">
                             </div>
-                            <div class="card_images_slider card_images_slider_middle">
-                                <img class="card_images_slider_img" src="/images/firstElement.jpg" alt="">
+                            <div class="card_images_slider">
+                                <img class="card_images_slider_img" src="/images/Палац.jpg" alt="">
                             </div>
-                            <div class="card_images_slider card_images_slider_right">
-                                <img class="card_images_slider_img" src="/images/firstElement.jpg" alt="">
+                            <div class="card_images_slider">
+                                <img class="card_images_slider_img" src="/images/Площа.jpg" alt="">
                             </div>
-                            <div class="card_images_slider card_images_slider_right_hidden">
-                                <img class="card_images_slider_img" src="/images/firstElement.jpg" alt="">
+                            <div class="card_images_slider">
+                                <img class="card_images_slider_img" src="/images/logo" alt="">
+                            </div>
+                            <div class="card_images_slider">
+                                <img class="card_images_slider_img" src="/images/saturday.png" alt="">
+                            </div>
+                            <div class="card_images_slider">
+                                <img class="card_images_slider_img" src="/images/Sunday.png" alt="">
+                            </div>
+                            <div class="card_images_slider">
+                                <img class="card_images_slider_img" src="/images/Sunday.png" alt="">
+                            </div>
+                            <div class="card_images_slider">
+                                <img class="card_images_slider_img" src="/images/Sunday.png" alt="">
                             </div>
                         </div>
                         <div class="right_arrow" onclick="rightArrowClick()"></div>
