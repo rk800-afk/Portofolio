@@ -191,6 +191,40 @@ header{
     align-items: center;
 }
 
+.down_arrow{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-top: 15px solid rgb(15, 255, 255);
+    border-left: 15px solid rgb(15, 255, 255);
+    transform: translateY(75%) rotate(-135deg) translateX(5%);
+    transition: all 1s;
+}
+
+.down_arrow:hover{
+    border-top: 15px solid rgb(253, 0, 0);
+    border-left: 15px solid rgb(253, 0, 0);
+}
+
+.main_container_arrow{
+     display: flex;
+     justify-content: center;
+     transform: translateY(90%);
+     align-items: center;
+     height: 200px;
+}
+
+.arrow_down_title{
+    font-size: 80px;
+    color: #17204a;
+    font-weight: 500;
+}
+
+.nav_down_arrow{
+    width: 100px;
+    height: 100px;
+}
+
 .navig_history{
     position: absolute;
     bottom: 10%;
